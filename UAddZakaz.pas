@@ -50,7 +50,7 @@ begin
  if (ENazOrg.Text = '') or (EKonLic.Text = '') or (EAdres.Text = '') or
      (ETel.Text = '') or (EFax.Text = '') then
        begin
-         application.MessageBox('Введены не все данные!','Ошибка',MB_ICONERROR);
+         application.MessageBox('Р’РІРµРґРµРЅС‹ РЅРµ РІСЃРµ РґР°РЅРЅС‹Рµ!','РћС€РёР±РєР°',MB_ICONERROR);
          abort;
        end;
 
@@ -60,7 +60,7 @@ begin
 
     FGlav.ibt.StartTransaction;
 
-    if SBAddZ.Caption = 'Добавить' then
+    if SBAddZ.Caption = 'Р”РѕР±Р°РІРёС‚СЊ' then
      begin
 
     ibs2.Close;

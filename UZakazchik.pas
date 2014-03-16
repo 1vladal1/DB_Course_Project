@@ -52,11 +52,11 @@ begin
 
   with SGZ do
    begin
-     Cells[0,0] := '  Название организации';
-     Cells[1,0] := '  Контактное лицо';
-     Cells[2,0] := '  Адрес';
-     Cells[3,0] := '  Телефон';
-     Cells[4,0] := '  Факс';
+     Cells[0,0] := '  РќР°Р·РІР°РЅРёРµ РѕСЂРіР°РЅРёР·Р°С†РёРё';
+     Cells[1,0] := '  РљРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ';
+     Cells[2,0] := '  РђРґСЂРµСЃ';
+     Cells[3,0] := '  РўРµР»РµС„РѕРЅ';
+     Cells[4,0] := '  Р¤Р°РєСЃ';
    end;
 
    for i := 0 to 4 do
@@ -132,8 +132,8 @@ begin
     FAddZak.ETel.Text := SGZ.Cells[3,vibstr];
     FAddZak.EFax.Text := SGZ.Cells[4,vibstr];
 
-    FAddZak.Caption := 'Редактирование заказчика';
-    FAddZak.SBAddZ.Caption := 'Изменить';
+    FAddZak.Caption := 'Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ Р·Р°РєР°Р·С‡РёРєР°';
+    FAddZak.SBAddZ.Caption := 'РР·РјРµРЅРёС‚СЊ';
 
     FAddZak.ShowModal;
 
@@ -155,11 +155,11 @@ begin
 
   if nom_zakaz = 0 then
    begin
-     application.MessageBox('Выберите заказчика!','Ошибка',MB_ICONERROR);
+     application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ Р·Р°РєР°Р·С‡РёРєР°!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
-  if application.MessageBox('Вы действительно хотите удалить заказчика?','Удаление заказчика',MB_ICONQUESTION + MB_YESNO) = idYes then
+  if application.MessageBox('Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ Р·Р°РєР°Р·С‡РёРєР°?','РЈРґР°Р»РµРЅРёРµ Р·Р°РєР°Р·С‡РёРєР°',MB_ICONQUESTION + MB_YESNO) = idYes then
    begin
      try
        if FGlav.ibt.InTransaction then FGlav.ibt.Commit;

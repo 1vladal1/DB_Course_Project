@@ -110,7 +110,7 @@ begin
   if (CBDocum.Text = '') or (EOtvl.Text = '') or (CBIspol.Text = '') or
      (EVidR.Text = '') or (MEDats.Text = '  .  .  ') or (MEDatK.Text = '  .  .  ') then
       begin
-          application.MessageBox('Введены не все атрибуты наряда!','Предупреждение',MB_ICONWARNING + MB_OK);
+          application.MessageBox('Р’РІРµРґРµРЅС‹ РЅРµ РІСЃРµ Р°С‚СЂРёР±СѓС‚С‹ РЅР°СЂСЏРґР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING + MB_OK);
           abort;
       end;
 
@@ -130,7 +130,7 @@ begin
 
          if n = 0 then
           begin
-            application.MessageBox('Такого документа в базе нет!','Предупреждение',MB_ICONWARNING);
+            application.MessageBox('РўР°РєРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РІ Р±Р°Р·Рµ РЅРµС‚!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
             abort;
           end;
 
@@ -144,7 +144,7 @@ begin
 
          if m = 0 then
           begin
-            application.MessageBox('Такого сотрудника в базе нет!','Предупреждение',MB_ICONWARNING);
+            application.MessageBox('РўР°РєРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ Р±Р°Р·Рµ РЅРµС‚!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
             abort;
           end;
 

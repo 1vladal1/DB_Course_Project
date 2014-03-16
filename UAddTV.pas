@@ -61,7 +61,7 @@ begin
 
   if EVid.Text = '' then
    begin
-      application.MessageBox('Введите название вида товара!','Предупреждение',MB_ICONWARNING + MB_OK);
+      application.MessageBox('Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РІРёРґР° С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING + MB_OK);
       abort;
    end;
 
@@ -70,11 +70,11 @@ begin
 
  if ibsp.ParamByName('kvidt').AsString <> '' then
   begin
-     application.MessageBox('Такое название вида товара уже существует!','Предупреждение',MB_ICONWARNING + MB_OK);
+     application.MessageBox('РўР°РєРѕРµ РЅР°Р·РІР°РЅРёРµ РІРёРґР° С‚РѕРІР°СЂР° СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING + MB_OK);
      abort;
   end;
 
- if FAddTV.Caption = 'Добавление вида товара' then
+ if FAddTV.Caption = 'Р”РѕР±Р°РІР»РµРЅРёРµ РІРёРґР° С‚РѕРІР°СЂР°' then
  begin
 
  try
@@ -143,11 +143,11 @@ begin
  if (ENazT.Text = '') or (ESerN.Text = '') or (EKolT.Text = '') or (ECena.Text = '') or
      (ESrok.Text = '') then
    begin
-      application.MessageBox('Введены не все атрибуты товара!','Предупреждение',MB_ICONWARNING + MB_OK);
+      application.MessageBox('Р’РІРµРґРµРЅС‹ РЅРµ РІСЃРµ Р°С‚СЂРёР±СѓС‚С‹ С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING + MB_OK);
       abort;
    end;
 
-  if FAddTV.Caption = 'Добавление товара' then
+  if FAddTV.Caption = 'Р”РѕР±Р°РІР»РµРЅРёРµ С‚РѕРІР°СЂР°' then
    begin
 
          try
@@ -224,7 +224,7 @@ procedure TFAddTV.ECenaKeyPress(Sender: TObject; var Key: Char);
 begin
   if not (Key in ['0'..'9',',']) then
     begin
-      application.MessageBox('В поле должны заносится только числа!','Ошибка ввода',MB_ICONERROR);
+      application.MessageBox('Р’ РїРѕР»Рµ РґРѕР»Р¶РЅС‹ Р·Р°РЅРѕСЃРёС‚СЃСЏ С‚РѕР»СЊРєРѕ С‡РёСЃР»Р°!','РћС€РёР±РєР° РІРІРѕРґР°',MB_ICONERROR);
       Key := #0;
     end;
 end;
@@ -233,7 +233,7 @@ procedure TFAddTV.EKolTKeyPress(Sender: TObject; var Key: Char);
 begin
   if not (Key in ['0'..'9']) then
     begin
-      application.MessageBox('В поле должны заносится только целые числа!','Ошибка ввода',MB_ICONERROR);
+      application.MessageBox('Р’ РїРѕР»Рµ РґРѕР»Р¶РЅС‹ Р·Р°РЅРѕСЃРёС‚СЃСЏ С‚РѕР»СЊРєРѕ С†РµР»С‹Рµ С‡РёСЃР»Р°!','РћС€РёР±РєР° РІРІРѕРґР°',MB_ICONERROR);
       Key := #0;
     end;
 end;
@@ -242,7 +242,7 @@ procedure TFAddTV.ESrokKeyPress(Sender: TObject; var Key: Char);
 begin
    if not (Key in ['0'..'9']) then
     begin
-      application.MessageBox('В поле должны заносится только целые числа!','Ошибка ввода',MB_ICONERROR);
+      application.MessageBox('Р’ РїРѕР»Рµ РґРѕР»Р¶РЅС‹ Р·Р°РЅРѕСЃРёС‚СЃСЏ С‚РѕР»СЊРєРѕ С†РµР»С‹Рµ С‡РёСЃР»Р°!','РћС€РёР±РєР° РІРІРѕРґР°',MB_ICONERROR);
       Key := #0;
     end;
 end;

@@ -83,7 +83,7 @@ var
 
 procedure TFGlav.BBVihodClick(Sender: TObject);
 begin
-if application.MessageBox('Действительно хотите завершить работу?','Подтвердите завершение',MB_ICONQUESTION + MB_YESNO)=idYes
+if application.MessageBox('Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ Р·Р°РІРµСЂС€РёС‚СЊ СЂР°Р±РѕС‚Сѓ?','РџРѕРґС‚РІРµСЂРґРёС‚Рµ Р·Р°РІРµСЂС€РµРЅРёРµ',MB_ICONQUESTION + MB_YESNO)=idYes
   then
    application.Terminate;
 end;
@@ -197,7 +197,7 @@ begin
   ibd.Open;
   LBVidFull;
  except
-   application.MessageBox('Не удается усановить связь с базой!','Ошибка',MB_ICONERROR);
+   application.MessageBox('РќРµ СѓРґР°РµС‚СЃСЏ СѓСЃР°РЅРѕРІРёС‚СЊ СЃРІСЏР·СЊ СЃ Р±Р°Р·РѕР№!','РћС€РёР±РєР°',MB_ICONERROR);
    application.Terminate;
  end;
 
@@ -226,7 +226,7 @@ begin
  try
    FAddTv.Height := 154;
    FAddTV.Width := 448;
-   FAddTV.Caption := 'Добавление вида товара';
+   FAddTV.Caption := 'Р”РѕР±Р°РІР»РµРЅРёРµ РІРёРґР° С‚РѕРІР°СЂР°';
    FAddTV.TS1.Destroy;
    FAddTV.ShowModal;
  finally
@@ -240,7 +240,7 @@ begin
 
  if vidtovar = 0 then
   begin
-    application.MessageBox('Выберите тип товара!','Предупреждение',MB_ICONWARNING);
+    application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
     abort;
   end;
 
@@ -250,7 +250,7 @@ begin
    FAddTv.Height := 154;
    FAddTV.Width := 448;
    FAddTV.TS1.Destroy;
-   FAddTV.Caption := 'Редактирование вида товара';
+   FAddTV.Caption := 'Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІРёРґР° С‚РѕРІР°СЂР°';
    FAddTV.EVid.Text := MasV[LBVid.ItemIndex][1];
    FAddTV.ShowModal;
  finally
@@ -262,12 +262,12 @@ procedure TFGlav.N2Click(Sender: TObject);
 begin
   if vidtovar = 0 then
   begin
-    application.MessageBox('Выберите тип товара!','Предупреждение',MB_ICONWARNING);
+    application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
     abort;
   end;
 
-  if application.MessageBox('Вы действительно хотите удалить данный вид товара?',
-                            'Удаление вида товара',MB_ICONQUESTION + MB_YESNO) = idYes then
+  if application.MessageBox('Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґР°РЅРЅС‹Р№ РІРёРґ С‚РѕРІР°СЂР°?',
+                            'РЈРґР°Р»РµРЅРёРµ РІРёРґР° С‚РѕРІР°СЂР°',MB_ICONQUESTION + MB_YESNO) = idYes then
    begin
 
      try
@@ -338,7 +338,7 @@ begin
 
  if vidtovar = 0 then
   begin
-    application.MessageBox('Выберите тип товара куда нужно добавить товар!','Предупреждение',MB_ICONWARNING);
+    application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї С‚РѕРІР°СЂР° РєСѓРґР° РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂ!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
     abort;
   end;
 
@@ -348,7 +348,7 @@ begin
  try
    FAddTv.Height := 255;
    FAddTV.Width := 495;
-   FAddTV.Caption := 'Добавление товара';
+   FAddTV.Caption := 'Р”РѕР±Р°РІР»РµРЅРёРµ С‚РѕРІР°СЂР°';
    FAddTV.TS.Destroy;
    FAddTV.ShowModal;
  finally
@@ -366,7 +366,7 @@ begin
 
   if kodtovara = 0 then
   begin
-    application.MessageBox('Выберите товар который нужно редактировать!','Предупреждение',MB_ICONWARNING);
+    application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ С‚РѕРІР°СЂ РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РЅРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
     abort;
   end;
 
@@ -381,7 +381,7 @@ begin
    FAddTV.EKolT.Text := MasT[LBTovar.ItemIndex][4];
    FAddTV.ECena.Text := MasT[LBTovar.ItemIndex][2];
    FAddTV.ESrok.Text := MasT[LBTovar.ItemIndex][5];
-   FAddTV.Caption := 'Редактирование товара';
+   FAddTV.Caption := 'Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ С‚РѕРІР°СЂР°';
    FAddTV.TS.Destroy;
    FAddTV.ShowModal;
  finally
@@ -397,13 +397,13 @@ begin
 
 if kodtovara = 0 then
   begin
-    application.MessageBox('Выберите название товара!','Предупреждение',MB_ICONWARNING);
+    application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РЅР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
     abort;
   end;
 
 
-  if application.MessageBox('Вы действительно хотите удалить данный товар?',
-                            'Удаление товара',MB_ICONQUESTION + MB_YESNO) = idYes then
+  if application.MessageBox('Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґР°РЅРЅС‹Р№ С‚РѕРІР°СЂ?',
+                            'РЈРґР°Р»РµРЅРёРµ С‚РѕРІР°СЂР°',MB_ICONQUESTION + MB_YESNO) = idYes then
    begin
 
      try
@@ -422,7 +422,7 @@ if kodtovara = 0 then
 
        if n <> 0 then
         begin
-          application.MessageBox('Невозможно удалить товар, т.к. он содержится в заказе!','Предупреждение',MB_ICONWARNING);
+          application.MessageBox('РќРµРІРѕР·РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ С‚РѕРІР°СЂ, С‚.Рє. РѕРЅ СЃРѕРґРµСЂР¶РёС‚СЃСЏ РІ Р·Р°РєР°Р·Рµ!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
           abort;
         end;
 
@@ -465,7 +465,7 @@ begin
    FAddTV.EKolT.Text := MasT[LBTovar.ItemIndex][4];
    FAddTV.ECena.Text := MasT[LBTovar.ItemIndex][2];
    FAddTV.ESrok.Text := MasT[LBTovar.ItemIndex][5];
-   FAddTV.Caption := 'Сведния о товаре';
+   FAddTV.Caption := 'РЎРІРµРґРЅРёСЏ Рѕ С‚РѕРІР°СЂРµ';
    FAddTV.ENazT.ReadOnly := true;
    FAddTV.ESerN.ReadOnly := true;
    FAddTV.EKolT.ReadOnly := true;

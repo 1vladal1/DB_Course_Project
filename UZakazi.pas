@@ -146,19 +146,19 @@ begin
 
   if CBNazDocum.Text = '' then
    begin
-     application.MessageBox('Выберите название документа!','Ошибка',MB_ICONERROR);
+     application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
   if EKol.Text = '' then
    begin
-     application.MessageBox('Введите количество товара!','Ошибка',MB_ICONERROR);
+     application.MessageBox('Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
    if StrToInt(EKol.Text) > StrToInt(MasT[CLTovar.ItemIndex][2]) then
    begin
-     application.MessageBox(PChar('Товара всего ' + MasT[CLTovar.ItemIndex][2]),'Предупреждение',MB_ICONWARNING);
+     application.MessageBox(PChar('РўРѕРІР°СЂР° РІСЃРµРіРѕ ' + MasT[CLTovar.ItemIndex][2]),'РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
      abort;
    end;
 
@@ -176,7 +176,7 @@ begin
 
   if n = 0 then
    begin
-     application.MessageBox('Такого документа в базе нет!','Ошибка',MB_ICONERROR);
+     application.MessageBox('РўР°РєРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
@@ -235,7 +235,7 @@ begin
 
   if n = 0 then
    begin
-     application.MessageBox('Такого документа в базе нет!','Ошибка',MB_ICONERROR);
+     application.MessageBox('РўР°РєРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
@@ -315,8 +315,8 @@ begin
 
   n := ibs3.Fields[0].AsInteger;
 
-  if n = 0 then Label4.Caption := 'Не оплачено'
-  else Label4.Caption := 'Оплачено';
+  if n = 0 then Label4.Caption := 'РќРµ РѕРїР»Р°С‡РµРЅРѕ'
+  else Label4.Caption := 'РћРїР»Р°С‡РµРЅРѕ';
 
   flag := false;
 
@@ -339,7 +339,7 @@ begin
 
   if CBNazDocum.Text = '' then
    begin
-     application.MessageBox('Выберите документ!','Ошибка',MB_ICONERROR);
+     application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРєСѓРјРµРЅС‚!','РћС€РёР±РєР°',MB_ICONERROR);
      abort;
    end;
 
@@ -374,7 +374,7 @@ begin
 
    if razm = 0 then
     begin
-      application.MessageBox('Данная заявка не содержит товара!','Предупреждение',MB_ICONWARNING);
+      application.MessageBox('Р”Р°РЅРЅР°СЏ Р·Р°СЏРІРєР° РЅРµ СЃРѕРґРµСЂР¶РёС‚ С‚РѕРІР°СЂР°!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONWARNING);
       abort;
     end;
 
@@ -422,7 +422,7 @@ begin
 
    Form1.QuickRep1.Preview;
 
-   Label4.Caption := 'Оплачено';
+   Label4.Caption := 'РћРїР»Р°С‡РµРЅРѕ';
 
    FGlav.ibt.Commit;
 

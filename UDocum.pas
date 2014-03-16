@@ -128,14 +128,14 @@ begin
 
   with SGS do
    begin
-     Cells[0,0] := '  Название документа';
-     Cells[1,0] := '  Тип документа';
-     Cells[2,0] := '  Имя заказчика';
-     Cells[3,0] := '  Имя сотрудника';
-     Cells[4,0] := '  Дата подписания';
-     Cells[5,0] := '  Дата окончания';
-     Cells[6,0] := '  Сумма';
-     Cells[7,0] := '  Причина';
+     Cells[0,0] := '  РќР°Р·РІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°';
+     Cells[1,0] := '  РўРёРї РґРѕРєСѓРјРµРЅС‚Р°';
+     Cells[2,0] := '  РРјСЏ Р·Р°РєР°Р·С‡РёРєР°';
+     Cells[3,0] := '  РРјСЏ СЃРѕС‚СЂСѓРґРЅРёРєР°';
+     Cells[4,0] := '  Р”Р°С‚Р° РїРѕРґРїРёСЃР°РЅРёСЏ';
+     Cells[5,0] := '  Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ';
+     Cells[6,0] := '  РЎСѓРјРјР°';
+     Cells[7,0] := '  РџСЂРёС‡РёРЅР°';
    end;
 
    for i := 0 to 7 do
@@ -158,7 +158,7 @@ begin
      (EStoim.Text = '') or (CBSotr.Text = '') or (CBPrich.Text = '') or (CBTipD.Text = '') or
      (CBZak.Text = '') then
       begin
-        application.MessageBox('Введены не все данные!','Ошибка',MB_ICONERROR);
+        application.MessageBox('Р’РІРµРґРµРЅС‹ РЅРµ РІСЃРµ РґР°РЅРЅС‹Рµ!','РћС€РёР±РєР°',MB_ICONERROR);
         abort;
       end;
 
@@ -178,7 +178,7 @@ begin
 
     if s = 0 then
      begin
-       application.MessageBox('Такого сотрудника в базе нет!','Ошибка',MB_ICONERROR);
+       application.MessageBox('РўР°РєРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
        abort;
      end;
 
@@ -192,7 +192,7 @@ begin
 
     if k = 0 then
      begin
-       application.MessageBox('Такой причины в базе нет!','Ошибка',MB_ICONERROR);
+       application.MessageBox('РўР°РєРѕР№ РїСЂРёС‡РёРЅС‹ РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
        abort;
      end;
 
@@ -206,7 +206,7 @@ begin
 
     if m = 0 then
      begin
-       application.MessageBox('Такого типа документа в базе нет!','Ошибка',MB_ICONERROR);
+       application.MessageBox('РўР°РєРѕРіРѕ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р° РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
        abort;
      end;
 
@@ -220,7 +220,7 @@ begin
 
     if n = 0 then
      begin
-       application.MessageBox('Такого заказчика в базе нет!','Ошибка',MB_ICONERROR);
+       application.MessageBox('РўР°РєРѕРіРѕ Р·Р°РєР°Р·С‡РёРєР° РІ Р±Р°Р·Рµ РЅРµС‚!','РћС€РёР±РєР°',MB_ICONERROR);
        abort;
      end;
 
@@ -369,7 +369,7 @@ begin
 
  if koddocument = 0 then
    begin
-     application.MessageBox('Выберите документ!','Предупреждение',MB_ICONERROR);
+     application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРєСѓРјРµРЅС‚!','РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ',MB_ICONERROR);
      abort;
    end;
 

@@ -119,15 +119,15 @@ begin
 
    with SG do
   begin
-   Cells[0,0] := 'Ф.И.О.';
-   Cells[1,0] := 'Должность';
-   Cells[2,0] := 'Отдел';
-   Cells[3,0] := 'Рабочий телефон';
-   Cells[4,0] := 'Ставка';
-   Cells[5,0] := 'Табельный номер';
-   Cells[6,0] := 'Дата рождения';
-   Cells[7,0] := 'Домашний адрес';
-   Cells[8,0] := 'Домашний телефон';
+   Cells[0,0] := 'Р¤.Р.Рћ.';
+   Cells[1,0] := 'Р”РѕР»Р¶РЅРѕСЃС‚СЊ';
+   Cells[2,0] := 'РћС‚РґРµР»';
+   Cells[3,0] := 'Р Р°Р±РѕС‡РёР№ С‚РµР»РµС„РѕРЅ';
+   Cells[4,0] := 'РЎС‚Р°РІРєР°';
+   Cells[5,0] := 'РўР°Р±РµР»СЊРЅС‹Р№ РЅРѕРјРµСЂ';
+   Cells[6,0] := 'Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ';
+   Cells[7,0] := 'Р”РѕРјР°С€РЅРёР№ Р°РґСЂРµСЃ';
+   Cells[8,0] := 'Р”РѕРјР°С€РЅРёР№ С‚РµР»РµС„РѕРЅ';
   end;
 
  for i := 0 to 8 do
@@ -296,7 +296,7 @@ begin
 
  if CBOtd.Text = '' then
   begin
-    application.MessageBox('Введите название отдела!','Ошибка',MB_ICONERROR);
+    application.MessageBox('Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РѕС‚РґРµР»Р°!','РћС€РёР±РєР°',MB_ICONERROR);
     abort;
   end;
 
@@ -465,12 +465,12 @@ begin
      (CBdolg.Text = '') or (EStav.Text = '') or (ETabN.Text = '') or
      (MDatr.Text = '  .  .  ') or (EDomA.Text = '') or (EDomt.Text = '') then
       begin
-         application.MessageBox('Не все данные заполнены!','Ошибка',MB_ICONERROR);
+         application.MessageBox('РќРµ РІСЃРµ РґР°РЅРЅС‹Рµ Р·Р°РїРѕР»РЅРµРЅС‹!','РћС€РёР±РєР°',MB_ICONERROR);
          abort;
       end;
 
 
-  if SBVstavit.Caption = 'Вставить' then
+  if SBVstavit.Caption = 'Р’СЃС‚Р°РІРёС‚СЊ' then
    begin
 
   ibs1.Close;
@@ -566,15 +566,15 @@ begin
     while not eof do
      begin
      
-        SG.Cells[0,i] := FGlav.DelitP(FieldByName('fio').AsString); // 'Ф.И.О.';
-        SG.Cells[1,i] := FGlav.DelitP(FieldByName('naz_doolgnost').AsString); //'Должность';
-        SG.Cells[2,i] := FGlav.DelitP(FieldByName('naz_otdel').AsString); //'Отдел';
-        SG.Cells[3,i] := FGlav.DelitP(FieldByName('rab_tel').AsString); //'Рабочий телефон';
-        SG.Cells[4,i] := FieldByName('stavka').AsString; //'Ставка';
-        SG.Cells[5,i] := FieldByName('tab_nomer').AsString; //'Табельный номер';
-        SG.Cells[6,i] := FieldByName('data_rog').AsString; //'Дата рождения';
-        SG.Cells[7,i] := FGlav.DelitP(FieldByName('dom_address').AsString); //'Домашний адрес';
-        SG.Cells[8,i] := FGlav.DelitP(FieldByName('dom_tel').AsString); //'Домашний телефон';
+        SG.Cells[0,i] := FGlav.DelitP(FieldByName('fio').AsString); // 'Р¤.Р.Рћ.';
+        SG.Cells[1,i] := FGlav.DelitP(FieldByName('naz_doolgnost').AsString); //'Р”РѕР»Р¶РЅРѕСЃС‚СЊ';
+        SG.Cells[2,i] := FGlav.DelitP(FieldByName('naz_otdel').AsString); //'РћС‚РґРµР»';
+        SG.Cells[3,i] := FGlav.DelitP(FieldByName('rab_tel').AsString); //'Р Р°Р±РѕС‡РёР№ С‚РµР»РµС„РѕРЅ';
+        SG.Cells[4,i] := FieldByName('stavka').AsString; //'РЎС‚Р°РІРєР°';
+        SG.Cells[5,i] := FieldByName('tab_nomer').AsString; //'РўР°Р±РµР»СЊРЅС‹Р№ РЅРѕРјРµСЂ';
+        SG.Cells[6,i] := FieldByName('data_rog').AsString; //'Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ';
+        SG.Cells[7,i] := FGlav.DelitP(FieldByName('dom_address').AsString); //'Р”РѕРјР°С€РЅРёР№ Р°РґСЂРµСЃ';
+        SG.Cells[8,i] := FGlav.DelitP(FieldByName('dom_tel').AsString); //'Р”РѕРјР°С€РЅРёР№ С‚РµР»РµС„РѕРЅ';
         SG.Cells[9,i] := FieldByName('kod_sotrud').AsString;
         inc(i);
         next;
@@ -599,7 +599,7 @@ begin
   SBClose.Enabled := true;
   TabSheet2.Enabled := true;
   PageControl1.ActivePage := TabSheet2;
-  SBVstavit.Caption := 'Вставить';
+  SBVstavit.Caption := 'Р’СЃС‚Р°РІРёС‚СЊ';
 end;
 
 procedure TFSot.SBCloseClick(Sender: TObject);
@@ -653,12 +653,12 @@ begin
   SBClose.Enabled := true;
   TabSheet2.Enabled := true;
   PageControl1.ActivePage := TabSheet2;
-  SBVstavit.Caption := 'Изменить';
+  SBVstavit.Caption := 'РР·РјРµРЅРёС‚СЊ';
 end;
 
 procedure TFSot.SBDelSClick(Sender: TObject);
 begin
-  if application.MessageBox('Вы действительно хотите удалить сотрудника?','Удаление сотрудника',MB_ICONQUESTION + MB_YESNO) = idYes then
+  if application.MessageBox('Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°?','РЈРґР°Р»РµРЅРёРµ СЃРѕС‚СЂСѓРґРЅРёРєР°',MB_ICONQUESTION + MB_YESNO) = idYes then
    begin
 
   ibs1.Close;
@@ -771,15 +771,15 @@ begin
     while not eof do
      begin
      
-        SG.Cells[0,i] := FGlav.DelitP(FieldByName('fio').AsString); // 'Ф.И.О.';
-        SG.Cells[1,i] := FGlav.DelitP(FieldByName('naz_doolgnost').AsString); //'Должность';
-        SG.Cells[2,i] := FGlav.DelitP(FieldByName('naz_otdel').AsString); //'Отдел';
-        SG.Cells[3,i] := FGlav.DelitP(FieldByName('rab_tel').AsString); //'Рабочий телефон';
-        SG.Cells[4,i] := FieldByName('stavka').AsString; //'Ставка';
-        SG.Cells[5,i] := FieldByName('tab_nomer').AsString; //'Табельный номер';
-        SG.Cells[6,i] := FieldByName('data_rog').AsString; //'Дата рождения';
-        SG.Cells[7,i] := FGlav.DelitP(FieldByName('dom_address').AsString); //'Домашний адрес';
-        SG.Cells[8,i] := FGlav.DelitP(FieldByName('dom_tel').AsString); //'Домашний телефон';
+        SG.Cells[0,i] := FGlav.DelitP(FieldByName('fio').AsString); // 'Р¤.Р.Рћ.';
+        SG.Cells[1,i] := FGlav.DelitP(FieldByName('naz_doolgnost').AsString); //'Р”РѕР»Р¶РЅРѕСЃС‚СЊ';
+        SG.Cells[2,i] := FGlav.DelitP(FieldByName('naz_otdel').AsString); //'РћС‚РґРµР»';
+        SG.Cells[3,i] := FGlav.DelitP(FieldByName('rab_tel').AsString); //'Р Р°Р±РѕС‡РёР№ С‚РµР»РµС„РѕРЅ';
+        SG.Cells[4,i] := FieldByName('stavka').AsString; //'РЎС‚Р°РІРєР°';
+        SG.Cells[5,i] := FieldByName('tab_nomer').AsString; //'РўР°Р±РµР»СЊРЅС‹Р№ РЅРѕРјРµСЂ';
+        SG.Cells[6,i] := FieldByName('data_rog').AsString; //'Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ';
+        SG.Cells[7,i] := FGlav.DelitP(FieldByName('dom_address').AsString); //'Р”РѕРјР°С€РЅРёР№ Р°РґСЂРµСЃ';
+        SG.Cells[8,i] := FGlav.DelitP(FieldByName('dom_tel').AsString); //'Р”РѕРјР°С€РЅРёР№ С‚РµР»РµС„РѕРЅ';
         SG.Cells[9,i] := FieldByName('kod_sotrud').AsString;
         inc(i);
         next;

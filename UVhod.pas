@@ -103,7 +103,7 @@ if (Epolz.Text = 'Dima') and (EPasw.Text = 'Dima') then
    end;
 
   if not flag then
-    application.MessageBox('Невозможен вход в базу!','Ошибка',MB_ICONERROR); 
+    application.MessageBox('РќРµРІРѕР·РјРѕР¶РµРЅ РІС…РѕРґ РІ Р±Р°Р·Сѓ!','РћС€РёР±РєР°',MB_ICONERROR); 
 
 end;
 
